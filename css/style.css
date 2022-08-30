@@ -1,0 +1,361 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Poppins:wght@400;500;600&family=Rajdhani:wght@500&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    background: rgba(0,0,0,0.1);
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+  
+}
+
+/* ----------NAME ----------------*/
+.name {
+    position: absolute;
+    margin: 2rem 5rem;
+    /* height: 100vh; */
+    text-align: center;
+    width: 20rem;
+}
+.name h1{
+    border: 10px solid red;
+    border:ridge;
+    font-size: 4rem;
+    color: #ffffff;
+    font-family: 'Cinzel Decorative', cursive;
+    background: #320303;
+    border: .3px solid snow;
+    padding: 3rem;
+    border-radius: 0rem 3rem 78rem 69rem;
+    box-shadow: 1px 15px 25px rgb(0, 7, 2);
+
+}
+
+/* --------preloader-------------- */
+
+.preloader {
+    background-color: rgb(70, 1, 1);
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    color:#4162f6;
+    text-shadow: .3px 9px 9px rgb(6, 13, 0);
+    align-items: center;
+    justify-content: center;  
+    transition: .5s ease; 
+}
+
+.fade{
+    opacity: 0;
+    display: none;
+}
+
+
+.preloader img{
+    border-radius: 10rem;
+}
+
+
+.preloader h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: .5s ease; 
+}
+
+/* ------------ container ------------ */
+.container{
+    padding:10px;
+    width:380px;
+    height: 100vh;
+    margin:3rem auto;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+/* ------------ header ------------ */
+.header{
+    width: 380px;
+    height:200px;
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
+
+.header-img{
+    width: 380px;
+    height:200px; 
+
+
+}
+.clear{
+    width : 30px;
+    height: 30px;
+    position: absolute;
+    right:20px;
+    top: 20px;
+}
+.clear i{
+    font-size: 30px;
+    color: #FFF;
+}
+.clear i:hover{
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+.date{
+    margin: .5rem 0;
+    position: absolute;
+    bottom: 22px;
+    left: 10px;
+    color: #FFF;
+    font-size: 25px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* ------------ content ------------ */
+.content{
+    width:380px;
+    height: 350px;
+    max-height:350px;
+    background-color: #FFF;
+    overflow: auto;
+}
+.content::-webkit-scrollbar-thumb{ 
+color: red;
+}
+.content ul{
+    padding:0;
+    margin:0;
+}
+.item{
+    width:380px;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.item i.co{
+    position: absolute;
+    font-size: 25px;
+    padding-left:5px;
+    left:15px;
+    top:10px;
+}
+.item i.co:hover{
+    cursor: pointer;
+}
+.fa-check-circle{
+    color:#6eb200;
+}
+.item p.text{
+    position: absolute;
+    padding:0;
+    margin:0;
+    font-size: 20px;
+    left:50px;
+    top:10px;
+    background-color: #FFF;
+    max-width:285px;
+}
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc;
+}
+.item i.de{
+    position: absolute;
+    font-size: 25px;
+    right:15px;
+    top:10px;
+}
+.item i.de:hover{
+    color:#af0000;
+    cursor: pointer;
+}
+/* ------------ add item ------------ */
+.add-to-do{
+    position: relative;
+    width: 360px;
+    height:40px;
+    background-color: #FFF;
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.add-to-do i{
+    position: absolute;
+    font-size: 40px;
+    color: #4162f6;
+}
+
+.add-to-do input{
+    position: absolute;
+    left: 50px;
+    height: 35px;
+    width: 310px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding-left:10px;
+}
+.add-to-do input::-webkit-input-placeholder { 
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+
+
+/* ---------footer ------------- */
+.footer{
+    position: absolute;
+    background-color: #030a28;
+    color: rgb(237, 235, 235);
+    top: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    left: 0;
+    padding: 2rem 0 0 0;
+    text-align: center;
+}
+
+.footer  .text p{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: justify;
+    padding: 1rem;
+    width: 40rem;
+}
+.footer i{
+    color: #FFF;
+   
+}
+
+.toggle button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(9, 0, 0);
+    padding:.3rem;
+    right: 0%;
+    top: 0;
+    margin: .3rem;
+    position: absolute;
+    text-transform: capitalize;
+}
+.toggle button span{
+    margin: .3rem;
+    
+    background-color:#021e30;
+    font-size: 1.4rem;
+}
+
+.toggle button span:hover{
+    background-color: #467100;
+}
+
+
+@media (max-width:760px){
+   .name {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  
+   }
+   .name h1{
+    font-size: 1rem;
+     height: 1rem;
+     padding: 1rem;
+    width: 10rem;
+    margin-top: -1rem;
+    border-radius:1rem;
+  
+   }
+    
+    body{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+    }
+
+    .container{
+        margin-top:-2rem;
+    }
+
+    .footer  {
+        gap: .5rem;
+     flex-direction: column;
+    }
+
+    .footer p{
+        font-size: .8rem;
+        color: rgb(160, 160, 160);
+    }
+    .footer .text p{
+        width: 20rem;
+        font-size: .8rem;
+    }
+
+.toggle button {
+    flex-direction: row;
+    background: transparent;
+    color: rgb(9, 0, 0);
+    padding:.3rem;
+    right: 0%;
+    top: 0;
+    margin:.1rem;
+    position: absolute;
+    text-transform: capitalize;
+    
+}
+.toggle button span{
+    margin: .2rem;
+    background-color:#021e30;
+    font-size: .9rem;
+}
+
+.toggle button span:hover{
+    background-color: #467100;
+}
+.preloader{
+    height:200vh;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
