@@ -66,7 +66,7 @@ function addToDo(toDo,id,done,trash){
 }
 
 
-//adding item to the list when a user uses the ENTER KEY
+//adding item to the list when a user uses the ENTER KEY.
 
 document.addEventListener("keyup",(e)=>{
     if(e.keyCode===13){
