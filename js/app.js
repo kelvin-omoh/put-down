@@ -168,6 +168,7 @@ function completeToDo(element){
 
 
 // element.classList.toggle(check)
+
 element.classList.toggle(unCheck)
 
 
