@@ -153,6 +153,29 @@ LIST[element.id].done=LIST[element.id].done?false:true;
 
 // add item to local Storage {must be added to where the list is}
 localStorage.setItem("Todo",JSON.stringify(LIST))
+
+
+
+
+toastr["info"]("Item completed! Good Job 🤩")
+
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-top-center",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
 }
 
 // remove todo function 
