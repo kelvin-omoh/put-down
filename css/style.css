@@ -427,11 +427,16 @@ color: red;
 
 
     @media (max-width:736px) {
-        
+
+     .name{
+        margin-top: 2rem;
+        width: 100%;
+     }
+    
         .footer{
         margin-top: -13rem;
         width:100%;
-        /* position: relative; */
+       
     }
     }
     
