@@ -194,6 +194,29 @@ function removeToDo(element){
 
 
 
+
+ toastr["warning"]("item removed!")
+
+        toastr.options = {
+          "closeButton": true,
+          "debug": false,
+          "newestOnTop": false,
+          "progressBar": true,
+          "positionClass": "toast-top-center",
+          "preventDuplicates": false,
+          "onclick": null,
+          "showDuration": "300",
+          "hideDuration": "1000",
+          "timeOut": "5000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+        }
+
+
+
 // add item to local Storage {must be added to where the list is}
 localStorage.setItem("TODO",JSON.stringify(LIST))
 }
