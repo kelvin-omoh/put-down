@@ -143,8 +143,34 @@ toastr.options = {
 
 // complete todo function 
 function completeToDo(element){
-element.classList.toggle(check)
+    if(element.classList.toggle(check)){
+
+        toastr["info"]("Item completed! Good Job 🤩")
+
+        toastr.options = {
+          "closeButton": false,
+          "debug": false,
+          "newestOnTop": false,
+          "progressBar": false,
+          "positionClass": "toast-top-center",
+          "preventDuplicates": false,
+          "onclick": null,
+          "showDuration": "300",
+          "hideDuration": "1000",
+          "timeOut": "5000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+        }
+    }
+
+
+// element.classList.toggle(check)
 element.classList.toggle(unCheck)
+
+
 element.parentNode.querySelector(".text").classList.toggle(lineThrough);
 
 //updating the element in the array
@@ -157,25 +183,6 @@ localStorage.setItem("Todo",JSON.stringify(LIST))
 
 
 
-toastr["info"]("Item completed! Good Job 🤩")
-
-toastr.options = {
-  "closeButton": false,
-  "debug": false,
-  "newestOnTop": false,
-  "progressBar": false,
-  "positionClass": "toast-top-center",
-  "preventDuplicates": false,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "5000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-}
 }
 
 // remove todo function 
