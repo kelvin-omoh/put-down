@@ -71,9 +71,9 @@ function addToDo(toDo,id,done,trash){
 document.addEventListener("keyup",(e)=>{
     if(e.keyCode===13){
         const toDo =input.value;
-
-
-
+        
+        
+ 
         //checking if there's an input or if the input is empty
         if(toDo){
             addToDo(toDo,id,false,false)
@@ -83,6 +83,25 @@ document.addEventListener("keyup",(e)=>{
                 done:false,
                 trash:false
             })
+            toastr["success"]("New item added to the list!")
+
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-bottom-right",
+                "preventDuplicates":true,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "3000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+              }
 
 
 // add item to local Storage {must be added to where the list is}
@@ -91,7 +110,29 @@ localStorage.setItem("TODO",JSON.stringify(LIST))
 
         }
       else{
-               alert("⚠️!!!!! No item added to the list")
+              
+
+
+               toastr["error"](" No item added to the list !!!");
+
+               
+toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": true,
+    "positionClass": "toast-bottom-right",
+    "preventDuplicates": true,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "3000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  }
 
       } 
             input.value="";
@@ -146,9 +187,35 @@ localStorage.setItem("TODO",JSON.stringify(LIST))
 
 
 clear.addEventListener("click",()=>{
-    alert("  List's  cleared")
-    location.reload();
+ 
+  
     localStorage.clear();
+
+
+
+
+
+//     toastr["info"]("All items have been cleared permanently!!!")
+
+//     toastr.options = {
+//       "closeButton": true,
+//       "debug": false,
+//       "newestOnTop": true,
+//       "progressBar": true,
+//       "positionClass": "toast-top-center",
+//       "preventDuplicates": true,
+//       "onclick": null,
+//       "showDuration": "300",
+//       "hideDuration": "1000",
+//       "timeOut": "6000",
+//       "extendedTimeOut": "1000",
+//       "showEasing": "swing",
+//       "hideEasing": "linear",
+//       "showMethod": "fadeIn",
+//       "hideMethod": "fadeOut"
+//     }
+ location.reload();
+   
 })
 
 
@@ -163,3 +230,4 @@ let reload =  window.addEventListener("load",()=>{
 function loading (){
     document.querySelector(".preloader").classList.add("fade");   
 }
+

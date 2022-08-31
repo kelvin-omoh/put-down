@@ -28,7 +28,7 @@ body{
     border: .3px solid snow;
     padding: 3rem;
     border-radius: 0rem 3rem 78rem 69rem;
-    box-shadow: 1px 15px 25px rgb(0, 7, 2);
+    box-shadow: 1px 0px 15px rgb(0, 7, 2);
 
 }
 
@@ -285,7 +285,7 @@ color: red;
     border-radius:1rem;
   
    }
-    
+
     body{
        display: flex;
        align-items: center;
@@ -298,8 +298,9 @@ color: red;
     }
 
     .footer  {
-        gap: .5rem;
+        gap: .1rem;
      flex-direction: column;
+     margin-top: -10rem;
     }
 
     .footer p{
@@ -335,6 +336,8 @@ color: red;
 .preloader{
     height:200vh;
 }
+
+
 
 }
 
